@@ -1,3 +1,5 @@
+@import 'mixins';
+
 @backgroundColor: rgb(137, 137, 163);
 @fontColor: rgb(73, 72, 72);
 
@@ -11,4 +13,6 @@ div.div-operations {
     font-size: 20px * .8;
     width: (100% / 2) + 25%;
     color: mix(@fontColor, @backgroundColor);
+
+    .rounded-corners-all(5px);
 }
