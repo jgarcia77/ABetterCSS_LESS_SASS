@@ -16,3 +16,22 @@ div.div-operations {
 
     .rounded-corners-all(5px);
 }
+
+div.div-nested-rules {
+    font-size: 14px;
+    font-weight: bold;
+
+    ul {
+        list-style-type: disc;
+        li {
+            font-style: italic;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
