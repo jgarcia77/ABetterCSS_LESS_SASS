@@ -1,5 +1,14 @@
-@backgroundColor: navy;
+@backgroundColor: rgb(137, 137, 163);
+@fontColor: rgb(73, 72, 72);
 
 body {
-    background-color: @backgroundColor;
+    background-color: fade(@backgroundColor, 50%);
+    color: saturate(@fontColor, 10%);
+}
+
+div.div-operations {
+    border: lighten(@fontColor, 20%) thin solid;
+    font-size: 20px * .8;
+    width: (100% / 2) + 25%;
+    color: mix(@fontColor, @backgroundColor);
 }
