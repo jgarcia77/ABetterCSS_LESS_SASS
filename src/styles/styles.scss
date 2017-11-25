@@ -1,5 +1,6 @@
 $primar-color: rgb(56, 56, 56);
 $secondary-color: rgb(216, 214, 214);
+$fontSize: 10px;
 
 body {
     background-color: fade_out($primar-color, .2);
@@ -7,7 +8,15 @@ body {
 }
 
 h1 {
-    font-size: 20px + 2;
+    @if $fontSize > 14px {
+        color: rgb(36, 36, 165);
+    }
+    @else if $fontSize < 14px {
+        color: rgb(230, 18, 18);
+    }
+    @else {
+        color: rgb(30, 172, 30);
+    }
 }
 
 @import "headings";
@@ -56,7 +65,26 @@ $app-width: 900px;
     @return ($app-width / $cols) - ($cols * 5px);
 }
 
-.col2 {
+.col {
     border: #000 solid thin;
+}
+
+.col2 {
+    @extend .col;
     width: column-width(2);
+}
+
+@for $col from 3 through 5 {
+    .col#{$col} {
+        @extend .col;
+        width: column-width($col);
+    }
+}
+
+@each $item in "cowboys" "cubs" "jeep" {
+    .#{$item} {
+        background-image: url(../images/#{$item}.jpg);
+        height: 150px;
+        width: 150px;
+    }
 }

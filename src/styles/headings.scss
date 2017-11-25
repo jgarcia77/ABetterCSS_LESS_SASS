@@ -1,9 +1,10 @@
 $baseHeadingFontSize: 35px;
 
-h1 {
-    font-size: $baseHeadingFontSize;
-}
+$i: 1;
 
-h2 {
-    font-size: $baseHeadingFontSize - 2px;
+@while $i < 5 {
+    h#{$i} {
+        font-size: ($baseHeadingFontSize - (($i - 1) * 5));
+        $i: $i + 1;
+    }
 }

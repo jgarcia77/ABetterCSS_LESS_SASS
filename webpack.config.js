@@ -33,6 +33,11 @@ module.exports = {
                     // use style-loader in development
                     fallback: "style-loader"
                 })
+            },
+            {
+                test: /\.(png|jpg|ttf|otf)$/,
+                exclude: /node_modules/,
+                loader: "url-loader"
             }
         ]
     },
