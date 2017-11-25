@@ -1,3 +1,11 @@
+$primar-color: rgb(56, 56, 56);
+$secondary-color: rgb(216, 214, 214);
+
 body {
-    background-color: gainsboro;
+    background-color: fade_out($primar-color, .2);
+    color: $secondary-color;
+}
+
+h1 {
+    font-size: 20px + 2;
 }
