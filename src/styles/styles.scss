@@ -50,3 +50,13 @@ a {
     background-color: rgb(168, 165, 165);
 }
 
+$app-width: 900px;
+
+@function column-width($cols) {
+    @return ($app-width / $cols) - ($cols * 5px);
+}
+
+.col2 {
+    border: #000 solid thin;
+    width: column-width(2);
+}
