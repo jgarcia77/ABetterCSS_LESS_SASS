@@ -1,0 +1,9 @@
+$baseHeadingFontSize: 35px;
+
+h1 {
+    font-size: $baseHeadingFontSize;
+}
+
+h2 {
+    font-size: $baseHeadingFontSize - 2px;
+}
