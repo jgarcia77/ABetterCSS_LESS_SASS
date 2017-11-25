@@ -33,13 +33,20 @@ a {
     }
 }
 
+@mixin rounded-corners-all($size) {
+    border-radius: $size;
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+}
+
 .button {
     color: rgb(0, 0, 128);
     font-weight: bolder;
+    @include rounded-corners-all(10px);
 }
 
 .submit-button {
     @extend .button;
-
     background-color: rgb(168, 165, 165);
 }
+
