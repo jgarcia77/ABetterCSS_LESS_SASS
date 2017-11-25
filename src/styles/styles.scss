@@ -32,3 +32,14 @@ a {
         size: 18px;
     }
 }
+
+.button {
+    color: rgb(0, 0, 128);
+    font-weight: bolder;
+}
+
+.submit-button {
+    @extend .button;
+
+    background-color: rgb(168, 165, 165);
+}
